@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://cc4dxflp5181c" path="res://art/Models/Kennys/televisionVintage.glb" id="23_vsfbm"]
 [ext_resource type="Script" uid="uid://5rotejanxij8" path="res://level_manager.gd" id="24_hfjjv"]
 [ext_resource type="PackedScene" uid="uid://b0cp42xems8uc" path="res://art/Models/Kennys/speaker.glb" id="25_r6nxg"]
+[ext_resource type="AudioStream" uid="uid://fu4p26fxh6t4" path="res://art/freesound_community-065492_tadawav-80833.mp3" id="26_vsfbm"]
+[ext_resource type="AudioStream" uid="uid://dcsj4h7iq8ghf" path="res://art/freesound_community-075176_duck-quack-40345.mp3" id="27_apkop"]
 
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_r6nxg"]
 
@@ -81,10 +83,10 @@ tracks/1/path = NodePath("Level0/Object2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(-0.81968904, 0, 1.7358263)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -295,7 +297,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.78
 [node name="Note" type="AudioStreamPlayer3D" parent="Level0/Object3" unique_id=174028468]
 stream = SubResource("AudioStreamGenerator_r6nxg")
 script = ExtResource("5_hfjjv")
-target_pitch = 67
+target_pitch = 64
 
 [node name="Sketchfab_Scene" parent="Level0" unique_id=328597881 instance=ExtResource("5_r6nxg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7129248, 0, 1.3211086)
@@ -312,6 +314,7 @@ far = 6.72
 script = ExtResource("4_cyg1o")
 
 [node name="Sky" type="Node3D" parent="." unique_id=103860363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.00861)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Sky" unique_id=19249384]
 environment = SubResource("Environment_7i4tb")
@@ -483,6 +486,12 @@ script = ExtResource("24_hfjjv")
 [node name="LevelTransitions" type="AnimationPlayer" parent="LevelManager" unique_id=355339651]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_1yojl")
+
+[node name="tada" type="AudioStreamPlayer3D" parent="LevelManager" unique_id=818447039]
+stream = ExtResource("26_vsfbm")
+
+[node name="quack" type="AudioStreamPlayer3D" parent="LevelManager" unique_id=800823898]
+stream = ExtResource("27_apkop")
 
 [node name="speaker" parent="." unique_id=607477856 instance=ExtResource("25_r6nxg")]
 transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 1.6595004, 0, 0.47491992)
