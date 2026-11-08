@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bqvkqfh3k7lgf"]
+
+[ext_resource type="Script" uid="uid://mu22u3k3dhsc" path="res://pause_menu.gd" id="1_37rai"]
+[ext_resource type="Texture2D" uid="uid://doclqv3n30gdh" path="res://art/kenney_ui-pack/PNG/Blue/Default/button_rectangle_depth_gradient.png" id="2_0qrqu"]
+[ext_resource type="FontFile" uid="uid://iw2jyw2ygr1d" path="res://art/kenney_ui-pack/Font/Kenney Future.ttf" id="3_mx0kw"]
+[ext_resource type="AudioStream" uid="uid://c05clvti8shlf" path="res://art/kenney_interface-sounds/Audio/click_004.ogg" id="4_fsbdh"]
+[ext_resource type="AudioStream" uid="uid://cfvltdvsdqspf" path="res://art/kenney_interface-sounds/Audio/click_005.ogg" id="6_w4oxd"]
+[ext_resource type="AudioStream" uid="uid://c5tg800lbsonv" path="res://art/kenney_interface-sounds/Audio/click_002.ogg" id="7_fsbdh"]
+[ext_resource type="AudioStream" uid="uid://qesxavp6axur" path="res://art/kenney_interface-sounds/Audio/click_003.ogg" id="7_n6wdb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7i4tb"]
+font = ExtResource("3_mx0kw")
+font_color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=56767368]
+process_mode = 3
+script = ExtResource("1_37rai")
+
+[node name="PausedBackground" type="ColorRect" parent="." unique_id=196180547]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="MenuBackground" type="CenterContainer" parent="." unique_id=845182377]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBackground" unique_id=1949301503]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="MenuBackground/VBoxContainer" unique_id=1927466306]
+layout_mode = 2
+icon = ExtResource("2_0qrqu")
+
+[node name="Label" type="Label" parent="MenuBackground/VBoxContainer/ResumeButton" unique_id=1804617047]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -36.0
+offset_right = 100.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume"
+label_settings = SubResource("LabelSettings_7i4tb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitButton" type="Button" parent="MenuBackground/VBoxContainer" unique_id=1765680495]
+layout_mode = 2
+icon = ExtResource("2_0qrqu")
+
+[node name="Label" type="Label" parent="MenuBackground/VBoxContainer/QuitButton" unique_id=1097061868]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -36.0
+offset_right = 100.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+label_settings = SubResource("LabelSettings_7i4tb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scroll1" type="AudioStreamPlayer3D" parent="." unique_id=1394598195]
+stream = ExtResource("4_fsbdh")
+
+[node name="ClickSound" type="AudioStreamPlayer3D" parent="." unique_id=2133278881]
+stream = ExtResource("7_fsbdh")
+
+[node name="Maximize" type="AudioStreamPlayer3D" parent="." unique_id=273259845]
+stream = ExtResource("7_n6wdb")
+
+[node name="Minimize" type="AudioStreamPlayer3D" parent="." unique_id=379638709]
+stream = ExtResource("6_w4oxd")

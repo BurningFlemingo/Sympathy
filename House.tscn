@@ -1,0 +1,496 @@
+[gd_scene format=3 uid="uid://enowjwh4ek5c"]
+
+[ext_resource type="Script" uid="uid://boloke3lv6ow8" path="res://clue.gd" id="2_1acc2"]
+[ext_resource type="PackedScene" uid="uid://bcmjabck5pjgu" path="res://art/Models/Kennys/dryer.glb" id="3_1acc2"]
+[ext_resource type="Script" uid="uid://brh5oe87usr72" path="res://object_1.gd" id="3_y1gf4"]
+[ext_resource type="Script" uid="uid://cq17x55bbv7w7" path="res://shake.gd" id="4_cyg1o"]
+[ext_resource type="Script" uid="uid://ck3qioaya6x5w" path="res://note.gd" id="5_hfjjv"]
+[ext_resource type="PackedScene" uid="uid://bf5kp3w4kjpph" path="res://art/Models/Kennys/floorFull.glb" id="5_quih1"]
+[ext_resource type="PackedScene" uid="uid://bpmrkwpohf3dk" path="res://art/goose_-_realistic_3d_model_demo_free/scene.gltf" id="5_r6nxg"]
+[ext_resource type="PackedScene" uid="uid://hmhcx0qdk61m" path="res://art/Models/Kennys/wall.glb" id="6_cfxdg"]
+[ext_resource type="PackedScene" uid="uid://c5mcwfhemv3qu" path="res://art/dead_hazmat_female/scene.gltf" id="7_1yojl"]
+[ext_resource type="PackedScene" uid="uid://cq5yeg8ol2uib" path="res://art/Models/Kennys/tableGlass.glb" id="7_olwjq"]
+[ext_resource type="PackedScene" uid="uid://b76k74khg7ahb" path="res://art/Models/Kennys/trashcan.glb" id="9_qaecf"]
+[ext_resource type="PackedScene" uid="uid://ufa6mpcpv4xn" path="res://art/Models/Kennys/lampRoundFloor.glb" id="10_74kf8"]
+[ext_resource type="Script" uid="uid://ba6nnud6pmdm3" path="res://shade_light.gd" id="10_qaecf"]
+[ext_resource type="Script" uid="uid://catkpfi2ohtvg" path="res://light_state.gd" id="11_qaecf"]
+[ext_resource type="PackedScene" uid="uid://bi1n16n0qhna5" path="res://art/Models/Kennys/stairsOpen.glb" id="13_1yojl"]
+[ext_resource type="PackedScene" uid="uid://bqvkqfh3k7lgf" path="res://canvas_layer.tscn" id="13_cyg1o"]
+[ext_resource type="AudioStream" uid="uid://b0sxs0pjsoxdq" path="res://art/freesound_community-light-switch-off-86314.mp3" id="14_er55m"]
+[ext_resource type="AudioStream" uid="uid://qhinay6mxh8k" path="res://art/269375__lwdickens__outdoor-ambience-city-quiet-distant-birds-traffic.wav" id="14_g58hp"]
+[ext_resource type="Script" uid="uid://vrjsg83crr0d" path="res://room_noise.gd" id="16_b2xwe"]
+[ext_resource type="PackedScene" uid="uid://bb1btrqsuv1v7" path="res://art/Models/Kennys/loungeDesignSofaCorner.glb" id="18_3iqos"]
+[ext_resource type="PackedScene" uid="uid://c26hb2772jw5c" path="res://art/Models/Kennys/rugDoormat.glb" id="19_wom5o"]
+[ext_resource type="PackedScene" uid="uid://o18bgxgaoau" path="res://art/Models/Kennys/doorwayFront.glb" id="20_hfjjv"]
+[ext_resource type="PackedScene" uid="uid://c0s56rqnhskoo" path="res://art/Models/Kennys/cabinetTelevisionDoors.glb" id="22_1yojl"]
+[ext_resource type="PackedScene" uid="uid://cc4dxflp5181c" path="res://art/Models/Kennys/televisionVintage.glb" id="23_vsfbm"]
+[ext_resource type="Script" uid="uid://5rotejanxij8" path="res://level_manager.gd" id="24_hfjjv"]
+[ext_resource type="PackedScene" uid="uid://b0cp42xems8uc" path="res://art/Models/Kennys/speaker.glb" id="25_r6nxg"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_r6nxg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_26j78"]
+
+[sub_resource type="Sky" id="Sky_vkv2p"]
+sky_material = SubResource("ProceduralSkyMaterial_26j78")
+process_mode = 3
+
+[sub_resource type="Environment" id="Environment_7i4tb"]
+background_mode = 1
+background_color = Color(0.16470589, 0.16470589, 0.2901961, 1)
+background_energy_multiplier = 0.7
+sky = SubResource("Sky_vkv2p")
+ambient_light_color = Color(0.6117647, 0.7764706, 0.87058824, 1)
+ambient_light_energy = 0.0
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+glow_levels/2 = 0.45
+glow_levels/5 = 0.18
+glow_levels/6 = 0.18
+glow_intensity = 0.5
+glow_strength = 1.1
+glow_bloom = 0.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olwjq"]
+albedo_color = Color(1, 1, 0.8235294, 1)
+emission_enabled = true
+emission = Color(1, 1, 0.79607844, 1)
+emission_energy_multiplier = 0.8
+rim = 0.15
+
+[sub_resource type="Animation" id="Animation_1yojl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level0/Object1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.39404908, 0, 1.809653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level0/Object2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Level0/Object3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Level0/Sketchfab_Scene:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.7129248, 0, 1.3211086)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sky:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_vsfbm"]
+resource_name = "level_0_exit"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level0/Object1")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level0/Object1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.39404908, 0, 1.809653), Vector3(-0.39404908, 0, 5.0916367)]
+}
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Level0/Object2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array()
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Level0/Object2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7784947, 0, 1.7506542), Vector3(-0.7784947, 0, 6.12102)]
+}
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Level0/Object3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array()
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Level0/Object3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 4.2750664)]
+}
+tracks/6/type = "position_3d"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Level0/Sketchfab_Scene")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array()
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Level0/Sketchfab_Scene:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.0009999999, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7129248, 0, 1.3211086), Vector3(0.64322525, 0, 2.9211361)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Room1/tableGlass:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sky:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1yojl"]
+_data = {
+&"RESET": SubResource("Animation_1yojl"),
+&"level_0_exit": SubResource("Animation_vsfbm")
+}
+
+[node name="House" type="Node3D" unique_id=606567615]
+
+[node name="Level0" type="Node3D" parent="." unique_id=1639425264]
+script = ExtResource("2_1acc2")
+is_active = true
+
+[node name="Object1" type="Node3D" parent="Level0" unique_id=28211238]
+transform = Transform3D(-0.996439, 0, 0.08431703, 0, 1, 0, -0.08431703, 0, -0.996439, -0.39404908, 0, 1.809653)
+script = ExtResource("3_y1gf4")
+glow_color = Color(0.3647059, 0.047058824, 0.92941177, 1)
+max_glow = 1.0
+max_shake_degrees = 1.0
+sympathetic_resonance_factor = 1.0
+
+[node name="Pivot" type="Node3D" parent="Level0/Object1" unique_id=57210739]
+
+[node name="dryer" parent="Level0/Object1/Pivot" unique_id=1523437971 instance=ExtResource("3_1acc2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0.2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Level0/Object1" unique_id=990971303]
+
+[node name="Note" type="AudioStreamPlayer3D" parent="Level0/Object1" unique_id=2105627937]
+stream = SubResource("AudioStreamGenerator_r6nxg")
+script = ExtResource("5_hfjjv")
+
+[node name="Object2" type="Node3D" parent="Level0" unique_id=1521621945]
+script = ExtResource("3_y1gf4")
+glow_color = Color(0.3647059, 0.047058824, 0.92941177, 1)
+max_glow = 1.0
+max_shake_degrees = 1.0
+pitch_class = 7
+sympathetic_resonance_factor = 1.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Level0/Object2" unique_id=1789899675]
+
+[node name="Note" type="AudioStreamPlayer3D" parent="Level0/Object2" unique_id=966663162]
+stream = SubResource("AudioStreamGenerator_r6nxg")
+script = ExtResource("5_hfjjv")
+target_pitch = 67
+
+[node name="Pivot" type="Node3D" parent="Level0/Object2" unique_id=1565412236]
+
+[node name="dryer" parent="Level0/Object2/Pivot" unique_id=1168879872 instance=ExtResource("3_1acc2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0.2)
+
+[node name="Object3" type="Node3D" parent="Level0" unique_id=2069879859]
+script = ExtResource("3_y1gf4")
+glow_color = Color(0.3647059, 0.047058824, 0.92941177, 1)
+max_glow = 1.0
+max_shake_degrees = 1.0
+pitch_class = 4
+sympathetic_resonance_factor = 1.0
+
+[node name="Pivot" type="Node3D" parent="Level0/Object3" unique_id=1716184612]
+
+[node name="stairsOpen" parent="Level0/Object3/Pivot" unique_id=1304549557 instance=ExtResource("13_1yojl")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.78504944, 0.06764674, 1.2196097)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Level0/Object3" unique_id=1052225357]
+
+[node name="Note" type="AudioStreamPlayer3D" parent="Level0/Object3" unique_id=174028468]
+stream = SubResource("AudioStreamGenerator_r6nxg")
+script = ExtResource("5_hfjjv")
+target_pitch = 67
+
+[node name="Sketchfab_Scene" parent="Level0" unique_id=328597881 instance=ExtResource("5_r6nxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7129248, 0, 1.3211086)
+
+[node name="Sketchfab_Scene2" parent="Level0" unique_id=863467513 instance=ExtResource("7_1yojl")]
+transform = Transform3D(-0.019747917, 0, 0.999805, 0, 1, 0, -0.999805, 0, -0.019747917, 1.6932812, 0.049544036, 0.9538248)
+
+[node name="Camera" type="Camera3D" parent="." unique_id=127103150]
+transform = Transform3D(0.7071068, -0.3535534, 0.61237246, 0, 0.8660254, 0.50000006, -0.7071068, -0.3535534, 0.61237246, 2.075701, 2.0095396, 2.073365)
+projection = 1
+size = 3.935
+near = 0.003
+far = 6.72
+script = ExtResource("4_cyg1o")
+
+[node name="Sky" type="Node3D" parent="." unique_id=103860363]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Sky" unique_id=19249384]
+environment = SubResource("Environment_7i4tb")
+
+[node name="Room1" type="Node3D" parent="." unique_id=1312862913]
+
+[node name="wall" parent="Room1" unique_id=1430483655 instance=ExtResource("6_cfxdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="wall2" parent="Room1" unique_id=788083203 instance=ExtResource("6_cfxdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="wall6" parent="Room1" unique_id=1417107352 instance=ExtResource("6_cfxdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="floorFull" parent="Room1" unique_id=46068935 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="floorFull2" parent="Room1" unique_id=1535277273 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="floorFull3" parent="Room1" unique_id=1525119978 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="floorFull4" parent="Room1" unique_id=64553258 instance=ExtResource("5_quih1")]
+
+[node name="floorFull5" parent="Room1" unique_id=282594474 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="floorFull6" parent="Room1" unique_id=634981372 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="floorFull7" parent="Room1" unique_id=2013914247 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+
+[node name="floorFull8" parent="Room1" unique_id=1848204627 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="floorFull9" parent="Room1" unique_id=947290545 instance=ExtResource("5_quih1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+
+[node name="tableGlass" parent="Room1" unique_id=374364937 instance=ExtResource("7_olwjq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.19113928, 0, 0.49970818)
+
+[node name="trashcan" parent="Room1" unique_id=418660575 instance=ExtResource("9_qaecf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8164817, 0, 0.6180012)
+
+[node name="lampRoundFloor" parent="Room1" unique_id=10880386 instance=ExtResource("10_74kf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5534756, 0, -0.65162605)
+
+[node name="lampRoundFloor(Clone)" parent="Room1/lampRoundFloor" index="0" unique_id=129289102]
+layers = 2
+surface_material_override/1 = SubResource("StandardMaterial3D_olwjq")
+
+[node name="Lights" type="Node3D" parent="Room1/lampRoundFloor" unique_id=689869667 node_paths=PackedStringArray("lights")]
+script = ExtResource("10_qaecf")
+lights = [NodePath("OmniLight3D"), NodePath("SpotLight3D"), NodePath("SpotLight3D2")]
+shade_mat = SubResource("StandardMaterial3D_olwjq")
+decay = 0.2
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Room1/lampRoundFloor/Lights" unique_id=1181894251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06758058, 0.7854058, -0.060455203)
+light_color = Color(1, 0.76862746, 0.65882355, 1)
+light_energy = 0.2
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+omni_range = 4.241
+omni_attenuation = 0.208
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Room1/lampRoundFloor/Lights" unique_id=958545075]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.058552146, 0.85272807, -0.07604247)
+light_color = Color(1, 0.76862746, 0.65882355, 1)
+shadow_enabled = true
+spot_attenuation = 1.59
+spot_angle = 64.6
+spot_angle_attenuation = 4.756855
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Room1/lampRoundFloor/Lights" unique_id=1877666903]
+transform = Transform3D(1, 0, 0, 0, 5.960465e-08, 1, 0, -1, 5.960465e-08, 0.058552146, 0.68377334, -0.07884985)
+light_color = Color(1, 0.76862746, 0.65882355, 1)
+spot_attenuation = 1.59
+spot_angle = 64.6
+spot_angle_attenuation = 4.1410594
+
+[node name="wall3" parent="Room1" unique_id=1043572648 instance=ExtResource("6_cfxdg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, 0)
+
+[node name="wall4" parent="Room1" unique_id=1212699282 instance=ExtResource("6_cfxdg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.99999994, 0, 0.99999994)
+
+[node name="wall5" parent="Room1" unique_id=1069261095 instance=ExtResource("6_cfxdg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.99999994, 0, 2)
+
+[node name="lampRoundFloor2" parent="Room1" unique_id=990946884 instance=ExtResource("10_74kf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8209069, 0, 1.9340582)
+
+[node name="lampRoundFloor(Clone)" parent="Room1/lampRoundFloor2" index="0" unique_id=129289102]
+layers = 2
+surface_material_override/1 = SubResource("StandardMaterial3D_olwjq")
+
+[node name="Lights" type="Node3D" parent="Room1/lampRoundFloor2" unique_id=712936573 node_paths=PackedStringArray("lights")]
+script = ExtResource("10_qaecf")
+lights = [NodePath("SpotLight3D"), NodePath("OmniLight3D"), NodePath("SpotLight3D2")]
+shade_mat = SubResource("StandardMaterial3D_olwjq")
+decay = 0.2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Room1/lampRoundFloor2/Lights" unique_id=1100437117]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.058552146, 0.85272807, -0.07604247)
+light_color = Color(0.65882355, 0.6431373, 1, 1)
+spot_attenuation = 1.59
+spot_angle = 64.6
+spot_angle_attenuation = 4.756855
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Room1/lampRoundFloor2/Lights" unique_id=166374776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06758058, 0.7854058, -0.060455203)
+light_color = Color(0.65882355, 0.6431373, 1, 1)
+light_energy = 0.2
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+omni_range = 4.241
+omni_attenuation = 0.208
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Room1/lampRoundFloor2/Lights" unique_id=165037185]
+transform = Transform3D(1, 0, 0, 0, 5.960465e-08, 1, 0, -1, 5.960465e-08, 0.058552146, 0.68377334, -0.07884985)
+light_color = Color(0.65882355, 0.6431373, 1, 1)
+shadow_enabled = true
+spot_attenuation = 1.59
+spot_angle = 64.6
+spot_angle_attenuation = 4.1410594
+
+[node name="LightState" type="Node" parent="." unique_id=1462874671]
+script = ExtResource("11_qaecf")
+
+[node name="LightOn" type="AudioStreamPlayer3D" parent="LightState" unique_id=16916462]
+stream = ExtResource("14_er55m")
+pitch_scale = 0.9
+max_polyphony = 4
+
+[node name="LightOff" type="AudioStreamPlayer3D" parent="LightState" unique_id=471685302]
+stream = ExtResource("14_er55m")
+max_polyphony = 4
+
+[node name="CanvasLayer" parent="." unique_id=56767368 instance=ExtResource("13_cyg1o")]
+
+[node name="RoomNoise" type="AudioStreamPlayer3D" parent="." unique_id=394966206]
+stream = ExtResource("14_g58hp")
+autoplay = true
+bus = &"Ambience"
+script = ExtResource("16_b2xwe")
+
+[node name="loungeDesignSofaCorner" parent="." unique_id=558625098 instance=ExtResource("18_3iqos")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.3708188, 0, 0.34356904)
+
+[node name="rugDoormat" parent="." unique_id=419937504 instance=ExtResource("19_wom5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0353599, 0.06669375, 1.8552725)
+
+[node name="doorwayFront" parent="." unique_id=1030653924 instance=ExtResource("20_hfjjv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+
+[node name="cabinetTelevisionDoors" parent="." unique_id=667811812 instance=ExtResource("22_1yojl")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5821795, 0, -0.34315935)
+
+[node name="televisionVintage" parent="." unique_id=1483205230 instance=ExtResource("23_vsfbm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6108032, 0.30215272, -0.16852045)
+
+[node name="LevelManager" type="Node" parent="." unique_id=1228927155]
+script = ExtResource("24_hfjjv")
+
+[node name="LevelTransitions" type="AnimationPlayer" parent="LevelManager" unique_id=355339651]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_1yojl")
+
+[node name="speaker" parent="." unique_id=607477856 instance=ExtResource("25_r6nxg")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 1.6595004, 0, 0.47491992)
+
+[node name="speaker2" parent="." unique_id=1169089966 instance=ExtResource("25_r6nxg")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 1.6714637, 0, -0.56767505)
+
+[editable path="Level0/Object1/Pivot/dryer"]
+[editable path="Level0/Object2/Pivot/dryer"]
+[editable path="Room1/lampRoundFloor"]
+[editable path="Room1/lampRoundFloor2"]

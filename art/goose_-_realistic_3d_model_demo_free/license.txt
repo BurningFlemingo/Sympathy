@@ -1,0 +1,11 @@
+Model Information:
+* title:	GOOSE - Realistic 3D Model (DEMO FREE)
+* source:	https://sketchfab.com/3d-models/goose-realistic-3d-model-demo-free-0f5568c57ed84f02a5cc790ba16f5abc
+* author:	WildMesh 3D (https://sketchfab.com/WildMesh_3D)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "GOOSE - Realistic 3D Model (DEMO FREE)" (https://sketchfab.com/3d-models/goose-realistic-3d-model-demo-free-0f5568c57ed84f02a5cc790ba16f5abc) by WildMesh 3D (https://sketchfab.com/WildMesh_3D) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

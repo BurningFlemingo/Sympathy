@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dead Hazmat Female
+* source:	https://sketchfab.com/3d-models/dead-hazmat-female-2e879c914d6b4e15a05f8496977854fd
+* author:	OHR3D (https://sketchfab.com/ohrtg)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dead Hazmat Female" (https://sketchfab.com/3d-models/dead-hazmat-female-2e879c914d6b4e15a05f8496977854fd) by OHR3D (https://sketchfab.com/ohrtg) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
